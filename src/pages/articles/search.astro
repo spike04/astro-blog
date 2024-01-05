@@ -3,7 +3,6 @@ import { getCollection, type CollectionEntry } from 'astro:content'
 import ArticleCard from '../../components/ArticleCard.astro'
 import SearchForm from '../../components/SearchForm.astro'
 import MainLayout from '../../layouts/MainLayout.astro'
-import { slide } from 'astro:transitions'
 
 const query: string | null = Astro.url.searchParams.get('query')
 

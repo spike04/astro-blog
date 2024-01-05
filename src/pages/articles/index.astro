@@ -1,10 +1,10 @@
 ---
 import { getCollection, type CollectionEntry } from 'astro:content'
-import MainLayout from '../../layouts/MainLayout.astro'
 import ArticleCard from '../../components/ArticleCard.astro'
-import SearchForm from '../../components/SearchForm.astro'
 import Pagination from '../../components/Pagination.astro'
+import SearchForm from '../../components/SearchForm.astro'
 import { HOMEPAGE_ARTICLES_PER_PAGE } from '../../constants'
+import MainLayout from '../../layouts/MainLayout.astro'
 
 const currentPage: number | null = +Astro.url.searchParams.get('page')! || 1
 
@@ -36,7 +36,6 @@ const articlesForPage: CollectionEntry<'blog'>[] = allBlogArticles.slice(
 
   <Pagination
     currentPage={currentPage}
-    totalPages={totalPages}
     disablePrevious={currentPage === 1}
     disableNext={currentPage === totalPages}
   />
