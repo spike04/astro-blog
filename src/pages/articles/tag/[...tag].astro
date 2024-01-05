@@ -14,7 +14,7 @@ const allBlogArticles: CollectionEntry<'blog'>[] = (
 const { tag } = Astro.params
 
 const tagArticles = allBlogArticles.filter((article) =>
-  article.data.tags.includes(tag)
+  article.data.tags.includes(tag!)
 )
 ---
 
